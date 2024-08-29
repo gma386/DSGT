@@ -39,9 +39,3 @@ Follow the on-screen instructions to manage tasks.
 
 JSON Data Storage
 The application stores all task data in a JSON file (tasks.json). This file is automatically created and updated as tasks are added, edited, or deleted.
-
-
-
-
-
-
