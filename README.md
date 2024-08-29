@@ -22,7 +22,7 @@ Ensure you have Visual Studio installed, with the .NET development workload.
 
 Installation
 1 - Clone the repository:
-git clone https://github.com/your-username/task-management-system.git
+git clone https://github.com/gma386/dsgt.git
 cd task-management-system
 
 2 - Open the project:
