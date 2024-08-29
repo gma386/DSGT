@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.Title - Gerenciamento de Tarefas</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <h1>Gerenciamento de Tarefas</h1>
+        <nav>
+            <a href="/">Home</a> |
+            <a href="/Task/Create">Nova Tarefa</a>
+        </nav>
+    </header>
+    <div class="container">
+        @RenderBody()
+    </div>
+</body>
+</html>

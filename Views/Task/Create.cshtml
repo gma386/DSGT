@@ -1,0 +1,19 @@
+@model TaskItem
+
+<h1>Criar Nova Tarefa</h1>
+
+<form asp-action="Create" method="post">
+    <div>
+        <label for="Title">Título:</label>
+        <input type="text" id="Title" name="Title" required>
+    </div>
+    <div>
+        <label for="Description">Descrição:</label>
+        <textarea id="Description" name="Description" required></textarea>
+    </div>
+    <div>
+        <label for="Status">Status:</label>
+        <input type="text" id="Status" name="Status" required>
+    </div>
+    <button type="submit">Salvar</button>
+</form>

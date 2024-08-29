@@ -1,0 +1,20 @@
+@model TaskItem
+
+<h1>Editar Tarefa</h1>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" name="Id" value="@Model.Id">
+    <div>
+        <label for="Title">Título:</label>
+        <input type="text" id="Title" name="Title" value="@Model.Title" required>
+    </div>
+    <div>
+        <label for="Description">Descrição:</label>
+        <textarea id="Description" name="Description" required>@Model.Description</textarea>
+    </div>
+    <div>
+        <label for="Status">Status:</label>
+        <input type="text" id="Status" name="Status" value="@Model.Status" required>
+    </div>
+    <button type="submit">Salvar</button>
+</form>
