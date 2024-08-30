@@ -6,6 +6,28 @@
     <a href="/Task/Create">Adicionar Nova Tarefa</a>
 </p>
 
+<form method="get" asp-action="Index" class="mb-3">
+    <div>
+        <label for="statusFilter">Status:</label>
+        <select id="statusFilter" name="statusFilter" class="form-control">
+            <option value="Todos">Todos</option>
+            <option value="Não Iniciado">Não Iniciado</option>
+            <option value="Em Progresso">Em Progresso</option>
+            <option value="Concluído">Concluído</option>
+        </select>
+    </div>
+
+    <div>
+        <label for="sortOrder">Ordenar por Data:</label>
+        <select id="sortOrder" name="sortOrder" class="form-control">
+            <option value="desc">Mais Recentes Primeiro</option>
+            <option value="asc">Mais Antigos Primeiro</option>
+        </select>
+    </div>
+
+    <button type="submit">Filtrar</button>
+</form>
+
 <table>
     <thead>
         <tr>

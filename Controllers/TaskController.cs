@@ -10,9 +10,24 @@ public class TaskController : Controller
         _taskService = new TaskService();
     }
 
-    public IActionResult Index()
+    public IActionResult Index(string statusFilter = "Todos", string sortOrder = "desc")
     {
         var tasks = _taskService.GetAllTasks();
+
+        if (statusFilter != "Todos")
+        {
+            tasks = tasks.Where(t => t.Status == statusFilter).ToList();
+        }
+
+        tasks = sortOrder == "desc" 
+        ? tasks.OrderByDescending(t => t.CreatedAt).ToList() 
+        : tasks.OrderBy(t => t.CreatedAt).ToList();
+
+        ViewBag.StatusFilter = statusFilter;
+        ViewBag.SortOrder = sortOrder;
+
+        return View(tasks);
+
         return View(tasks);
     }
 
