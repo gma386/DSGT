@@ -20,4 +20,14 @@ public class TaskService
         var json = JsonSerializer.Serialize(tasks);
         File.WriteAllText(_filePath, json);
     }
+
+    public void AddTask(TaskItem task)
+    {
+        var tasks = GetAllTasks();
+        task.Id = tasks.Count > 0 ? tasks[^1].Id + 1 : 1;
+        task.CreatedAt = DateTime.Now;  
+        tasks.Add(task);
+        SaveTasks(tasks);
+    }
+
 }

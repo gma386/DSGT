@@ -21,11 +21,12 @@ public class TaskController : Controller
     [HttpPost]
     public IActionResult Create(TaskItem task)
     {
-        var tasks = _taskService.GetAllTasks();
-        task.Id = tasks.Count > 0 ? tasks.Max(t => t.Id) + 1 : 1;
-        tasks.Add(task);
-        _taskService.SaveTasks(tasks);
-        return RedirectToAction("Index");
+        if (ModelState.IsValid)
+        {
+            _taskService.AddTask(task);
+            return RedirectToAction("Index");
+        }
+        return View(task);
     }
 
     public IActionResult Edit(int id)
