@@ -9,9 +9,8 @@ Task Update: Allows for the editing of existing tasks, including the updating of
 Task Deletion: Provides the functionality to delete tasks from the list.
 
 
-Optional Features (Not Implemented)
+Optional Features
 Filters and Sorting: The ability to filter and sort tasks based on different criteria (e.g., status, creation date) was planned but is not implemented in this version.
-Unit Tests: While unit tests for the main functionalities were desired, they are not included in this version of the project.
 
 Getting Started
 Follow these instructions to set up and run the project locally on your machine.
